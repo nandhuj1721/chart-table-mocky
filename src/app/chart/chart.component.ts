@@ -17,9 +17,9 @@ export class ChartComponent implements OnInit {
   constructor(private data:MockyService) { }
 
   ngOnInit():void {
-    this.data.getJsonData().subscribe((res: any[])=>{
-      let labels = res.map((x:{month:string;})=>x.month);
-      let values = res.map((x:{temperature:number;})=> x.temperature);
+    this.data.getJsonData().subscribe(res=>{
+      let labels = res['chart'].map((x:{month:string;})=>x.month);
+      let values = res['chart'].map((x:{temperature:number;})=> x.temperature);
 
       var ctx = document.getElementById('barChart') as HTMLCanvasElement;
       var barChart = new Chart(ctx, {
@@ -38,7 +38,7 @@ export class ChartComponent implements OnInit {
         },
         options: {
           legend: {
-            display: false
+            display: true
           },
           scales: {
             xAxes: [{

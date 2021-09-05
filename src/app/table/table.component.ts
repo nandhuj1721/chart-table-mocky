@@ -9,8 +9,6 @@ export interface TableData{
   temperature : number;
 }
 
-
-
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -20,7 +18,7 @@ export class TableComponent implements OnInit {
 
 
   ELEMENT_DATA!: TableData[];
-  displayedColumns: string[] = ["month", "temperature"];
+  displayedColumns: string[] = ["currency", "value"];
   dataSource = new MatTableDataSource<TableData>(this.ELEMENT_DATA);
   constructor(private data:MockyService) { }
 
@@ -30,6 +28,6 @@ export class TableComponent implements OnInit {
 
 public getAllData() {
   let resp = this.data.getJsonData();
-  resp.subscribe(report=> this.dataSource.data= report as TableData[]);  
+  resp.subscribe(report=> this.dataSource.data= report["table"] as TableData[]);  
 }
 }

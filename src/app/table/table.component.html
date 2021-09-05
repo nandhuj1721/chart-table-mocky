@@ -3,15 +3,15 @@
     <h1>Table</h1>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
-    <ng-container matColumnDef="month">
-      <th mat-header-cell *matHeaderCellDef> Month </th>
-      <td mat-cell *matCellDef="let element"> {{element.month}} </td>
+    <ng-container matColumnDef="currency">
+      <th mat-header-cell *matHeaderCellDef> Currency </th>
+      <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
     </ng-container>
 
 
-    <ng-container matColumnDef="temperature">
-      <th mat-header-cell *matHeaderCellDef> Temperature </th>
-      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef> Value in Rupee </th>
+      <td mat-cell *matCellDef="let element"> {{element.value}} </td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
