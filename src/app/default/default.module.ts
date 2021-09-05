@@ -9,6 +9,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartComponent } from '../chart/chart.component';
+import { TableComponent } from '../table/table.component';
 
 import {MatTableModule} from '@angular/material/table';
 
@@ -20,7 +21,7 @@ import {MatTableModule} from '@angular/material/table';
     CommonModule, 
     MockyService,
     ChartComponent,
-    DefaultComponent,
+    DefaultComponent,TableComponent,
 
     ChartsModule, 
     RouterModule, 

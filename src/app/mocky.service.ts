@@ -12,6 +12,6 @@ export class MockyService {
 
 
   public getJsonData(): Observable<any>{
-    return this._http.get("https://run.mocky.io/v3/97b4a742-f660-45ca-ad16-227b1e10e520")
+    return this._http.get("https://run.mocky.io/v3/d0845788-bdbc-466e-a830-4b85a27a6ac9")
   }
 }

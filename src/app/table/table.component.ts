@@ -5,8 +5,8 @@ import { MockyService } from '../mocky.service';
 
 
 export interface TableData{
-  employee : string;
-  salary : number;
+  month : string;
+  temperature : number;
 }
 
 
@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
 
 
   ELEMENT_DATA!: TableData[];
-  displayedColumns: string[] = ["employee", "salary"];
+  displayedColumns: string[] = ["month", "temperature"];
   dataSource = new MatTableDataSource<TableData>(this.ELEMENT_DATA);
   constructor(private data:MockyService) { }
 

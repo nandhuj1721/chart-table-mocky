@@ -18,8 +18,8 @@ export class ChartComponent implements OnInit {
 
   ngOnInit():void {
     this.data.getJsonData().subscribe((res: any[])=>{
-      let labels = res.map((x:{employee:string;})=>x.employee);
-      let values = res.map((x:{salary:number;})=> x.salary);
+      let labels = res.map((x:{month:string;})=>x.month);
+      let values = res.map((x:{temperature:number;})=> x.temperature);
 
       var ctx = document.getElementById('barChart') as HTMLCanvasElement;
       var barChart = new Chart(ctx, {
@@ -28,7 +28,7 @@ export class ChartComponent implements OnInit {
           labels: labels,
           datasets: [
             { 
-              label: 'Employee Salary',
+              label: 'Average Temperature',
               data: values,
               backgroundColor: [ "#B10DC9","#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"],
               borderColor: [ "#7FDBFF","#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"],
@@ -38,7 +38,7 @@ export class ChartComponent implements OnInit {
         },
         options: {
           legend: {
-            display: true
+            display: false
           },
           scales: {
             xAxes: [{
@@ -49,7 +49,7 @@ export class ChartComponent implements OnInit {
             }],
           }, 
           animation: {
-            // easing: "easeInSine", 
+            
             duration: 1000
           }
         }

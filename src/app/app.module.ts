@@ -15,6 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MockyService } from './mocky.service';
 import { DefaultComponent } from './default/default.component';
 import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     
-    CommonModule,MatToolbarModule,FlexLayoutModule,MatDividerModule,ChartsModule,
+    CommonModule,MatToolbarModule,FlexLayoutModule,MatDividerModule,ChartsModule,FormsModule,
+    HttpClientModule, 
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

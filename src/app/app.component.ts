@@ -1,7 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChartComponent } from './chart/chart.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +16,7 @@ export class AppComponent implements OnInit {
     
   }
   public onChartClicked(){
-    this.router.navigate([ChartComponent]);
+    this.router.navigate(["./chart"]);
   }
   public onTableClicked(){
     this.router.navigate(["./table"]);
